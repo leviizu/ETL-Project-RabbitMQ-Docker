@@ -12,5 +12,6 @@ Within the scope of the prototype, the following components are to be programmed
 ● A producer that reads in the sample data and emits it at random intervals between 0-1 second. 
 
 ● In RabbitMQ Consumer that reads this data from a queue, performs the following aggregations and stores the results:
-○ Global number of edits per minute.
-○ Number of edits of the German Wikipedia per minute
+
+#### Global number of edits per minute.
+#### Number of edits of the German Wikipedia per minute
