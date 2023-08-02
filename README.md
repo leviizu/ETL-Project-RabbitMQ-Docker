@@ -8,6 +8,7 @@ where they can be analysed with a suitable query engine.
 ## Task
 A RabbtiqMQ instance is to be set up as a prototype to test and demonstrate possible scenarios.
 Within the scope of the prototype, the following components are to be programmed as part of the prototype:
+
 ● A producer that reads in the sample data and emits it at random intervals between 0-1 second. 
 
 ● In RabbitMQ Consumer that reads this data from a queue, performs the following aggregations and stores the results:
