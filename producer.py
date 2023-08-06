@@ -17,8 +17,14 @@ class DataEmitter:
         try:
             self.connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
             self.channel = self.connection.channel()
+            
+            # declare exchange
             self.channel.exchange_declare(exchange='wikipedia_edits', exchange_type='direct')
+
+            # declare queue
             self.channel.queue_declare(queue='wikipedia_queue')
+
+            #binding the queue to the exchange and routing key
             self.channel.queue_bind(exchange='wikipedia_edits', queue='wikipedia_queue', routing_key='wikipedia_key')
             print("Connected to RabbitMQ server.")
             return True
