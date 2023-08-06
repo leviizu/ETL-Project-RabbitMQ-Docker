@@ -19,7 +19,7 @@ class DataEmitter:
             self.channel = self.connection.channel()
             
             # declare exchange
-            self.channel.exchange_declare(exchange='wikipedia_edits', exchange_type='fanout')
+            self.channel.exchange_declare(exchange='wikipedia_edits', exchange_type='direct')
 
             # declare queue
             self.channel.queue_declare(queue='wikipedia_queue')
